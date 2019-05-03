@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	
+	<link rel="stylesheet" href="assets/css/login.css">
+	
+</head>
+<body>
+<header id="background" class="masthead text-white text-center bg-secondary" style="background: url('https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80')no-repeat center center;background-size: cover;background-attachment: fixed;">
+	<nav id="navBackground" class="navbar navbar-light navbar-expand-md navbar-fixed-top" style="navBackground">
+	
+    		<div id="group-brand" class="container-fluid"><a onclick="showModal()" href="#" class="navbar-brand">CS362 - Group 6</a><button data-toggle="collapse" data-target="#navcol-3" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        		<div class="collapse navbar-collapse" id="navcol-3">
+            			<ul class="nav navbar-nav">
+					<li role="presentation" class="nav-item"><a href="view-tools-demo.html" class="nav-link active">Patron Views Tools Demo</a></li>
+					<li role="presentation" class="nav-item"><a href="loginPage.html" class="nav-link">Login Demo</a></li>
+					<li role="presentation" class="nav-item"><a href="create-patron-demo.html" class="nav-link">Librarian  Creates Patron Account Demo</a></li>
+					<li role="presentation" class="nav-item"><a href="#" class="nav-link"></a></li>
+            			</ul>
+        		</div>
+    		</div>
+	</nav>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<div class="container">
+		<div class="card card-login mx-auto text-center bg-dark">
+			<div class="card-header mx-auto bg-dark">
+				<span> <!img src="https://amar.vote/assets/img/amarVotebd.png" class="w-75" alt="Logo"> </span><br/>
+							<span class="logo_title mt-5"> Community Tool Sharing Library </span>
+	<!--            <h1>--><?php //echo $message?><!--</h1>-->
+
+			</div>
+			<div class="card-body">
+				<form action="" method="get">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" id="username" name="username" class="form-control" placeholder="Username">
+					</div>
+
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" id="password" name="password" class="form-control" placeholder="Password">
+					</div>
+
+					<div class="form-group">
+						<input type="button" onclick="loginSubmit()" name="btn" value="Login" class="btn btn-outline-danger float-right login_btn">
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	</header>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+	<script src="assets/js/login.js"></script>
+	
+</body>
+
+</html>
