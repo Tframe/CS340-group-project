@@ -1,2 +1,2 @@
-# cs362-group-project
+# cs40-group 6-project
 Implementation of a travel website.
