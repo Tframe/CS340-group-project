@@ -133,27 +133,55 @@
 })();
 
 // Get the modal
-var modal = document.getElementById('myModal');
+var addModal = document.getElementById('addModal');
+var editModal = document.getElementById('editModal');
+var deleteModal = document.getElementById('deleteModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var addBtn = document.getElementById("addBtn");
+var editBtn = document.getElementById("editBtn")
+var deleteBtn = document.getElementById("deleteBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var spanAdd = document.getElementsByClassName("closeAdd")[0];
+var spanEdit = document.getElementsByClassName("closeEdit")[0];
+var spanDelete = document.getElementsByClassName("closeDelete")[0];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+addBtn.onclick = function() {
+  addModal.style.display = "block";
+}
+editBtn.onclick = function() {
+  editModal.style.display = "block";
+}
+deleteBtn.onclick = function() {
+  deleteModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+spanAdd.onclick = function() {
+  addModal.style.display = "none";
+}
+spanEdit.onclick = function() {
+  editModal.style.display = "none";
+}
+spanDelete.onclick = function() {
+  deleteModal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == addModal) {
+    addModal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == editModal) {
+    editModal.style.display = "none";
+  }
+}
+window.onclick = function(event) {
+  if (event.target == deleteModal) {
+    deleteModal.style.display = "none";
   }
 }

@@ -14,8 +14,43 @@
     padding: 2rem 0;
 }
 
+.modal-button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.button-center{
+	display: inline-block;
+}
+
 /* The Modal (background) */
-.modal {
+.addModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.editModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.deleteModal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -38,15 +73,39 @@
 }
 
 /* The Close Button */
-.close {
+.closeAdd {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeEdit {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.closeDelete {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.closeAdd:hover,
+.closeAdd:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.closeEdit:hover,
+.closeEdit:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.closeDelete:hover,
+.closeDelete:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;

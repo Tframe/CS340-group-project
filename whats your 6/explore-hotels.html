@@ -100,49 +100,118 @@
 			</div>
 		
 			<!-- Trigger/Open The Modal -->
-			<div class = "text-center">
-				<button type="button" class="btn btn-primary btn-lg" id="myBtn">Add Hotel</button>
+						<div class = "text-center">
+				<button type="button" class="btn btn-primary btn-lg" id="addBtn" data-target="#addModal">Add Hotel</button>
+				<button type="button" class="btn btn-primary btn-lg" id="editBtn" data-target="#editModal">Edit Hotel</button>
+				<button type="button" class="btn btn-primary btn-lg" id="deleteBtn" data-target="#deleteModal">Delete Hotel</button>
 			</div>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
 
+			<!-- The Modal -->
+			<div id="addModal" class="modal">
 			  <!-- Modal content -->
-			  <div class="modal-content">
-				<span class="close">&times;</span>
-				<p>Add Hotel Information</p>
-				<form id="new-acnt-form">
-                    <div class="row first-row-space">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Hotel Name</label>
-                                <input type="text" 
-                                       class="form-control" 
-                                       id="hotel-name"
-                                       placeholder="hotel name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Phone #</label>
-                                <input type="text" 
-                                       class="form-control"
-                                       id="phone-number" 
-                                       placeholder="phone #">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row first-row-space">
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2 text-right">
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-				
+				  <div class="modal-content">
+					<span class="closeAdd">&times;</span>
+					<p>Add Hotel Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Hotel</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="hotel"
+										   placeholder="hotel">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Phone #</label>
+									<input type="text" 
+										   class="form-control"
+										   id="phone" 
+										   placeholder="phone">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+			</div>  
+			  <div id="editModal" class="modal">
+			  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeEdit">&times;</span>
+					<p>Edit Hotel Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Hotel</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="hotel"
+										   placeholder="hotel">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Phone #</label>
+									<input type="text" 
+										   class="form-control"
+										   id="phone" 
+										   placeholder="phone">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
 			  </div>
-		
+			  <div class="modal" id="deleteModal">
+				  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeDelete">&times;</span>
+					<p>Delete Hotel</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Hotel</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="city"
+										   placeholder="city">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+				</div>
             
         </div>
         

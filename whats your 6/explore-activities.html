@@ -100,57 +100,120 @@
 			</div>
 		
 			<!-- Trigger/Open The Modal -->
-			<div class = "text-center">
-				<button type="button" class="btn btn-primary btn-lg" id="myBtn">Add Activity</button>
+						<div class = "text-center">
+				<button type="button" class="btn btn-primary btn-lg" id="addBtn" data-target="#addModal">Add Activity</button>
+				<button type="button" class="btn btn-primary btn-lg" id="editBtn" data-target="#editModal">Edit Activity</button>
+				<button type="button" class="btn btn-primary btn-lg" id="deleteBtn" data-target="#deleteModal">Delete Activity</button>
 			</div>
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
 
+			<!-- The Modal -->
+			<div id="addModal" class="modal">
 			  <!-- Modal content -->
-			  <div class="modal-content">
-				<span class="close">&times;</span>
-				<p>Add Activity Information</p>
-				<form id="new-acnt-form">
-                    <div class="row first-row-space">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Activity Name</label>
-                                <input type="text" 
-                                       class="form-control" 
-                                       id="activity-name"
-                                       placeholder="activity name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Phone #</label>
-                                <input type="text" 
-                                       class="form-control"
-                                       id="phone-number" 
-                                       placeholder="phone #">
-                            </div>
-                        </div>
-						<div class="col-md-6">
-                            <div class="form-group">
-                                <label>Activity Level</label>
-                                <input type="text" 
-                                       class="form-control"
-                                       id="activity-level" 
-                                       placeholder="activity level">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row first-row-space">
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2 text-right">
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-				
+				  <div class="modal-content">
+					<span class="closeAdd">&times;</span>
+					<p>Add Activity Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Activity</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="activity"
+										   placeholder="activity">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Phone #</label>
+									<input type="text" 
+										   class="form-control"
+										   id="phone" 
+										   placeholder="phone">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+			</div>  
+			  <div id="editModal" class="modal">
+			  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeEdit">&times;</span>
+					<p>Edit Activity Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Activity</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="activity"
+										   placeholder="activity">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Phone #</label>
+									<input type="text" 
+										   class="form-control"
+										   id="phone" 
+										   placeholder="phone">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
 			  </div>
+			  <div class="modal" id="deleteModal">
+				  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeDelete">&times;</span>
+					<p>Delete Activity</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Activity</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="activity"
+										   placeholder="activity">
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+				</div>
 		
 		
             

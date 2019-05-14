@@ -6,8 +6,12 @@
         <title>Explore Cities</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/create-profile.css">
+		
     </head>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/create-profile.js"></script>
     <body>
 		
         <nav class="navbar navbar-default navbar-expand-md navbar-fixed-top" style="background-color: #212121; font-size: 17px; font-weight: bold">
@@ -99,67 +103,124 @@
 			</div>
 		
 		
-		
-		
-		
 			<!-- Trigger/Open The Modal -->
 			<div class = "text-center">
-				<button type="button" class="btn btn-primary btn-lg" id="myBtn">Add City</button>
+				<button type="button" class="btn btn-primary btn-lg" id="addBtn" data-target="#addModal">Add City</button>
+				<button type="button" class="btn btn-primary btn-lg" id="editBtn" data-target="#editModal">Edit City</button>
+				<button type="button" class="btn btn-primary btn-lg" id="deleteBtn" data-target="#deleteModal">Delete City</button>
 			</div>
+
 			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
+			<div id="addModal" class="modal">
 			  <!-- Modal content -->
-			  <div class="modal-content">
-				<span class="close">&times;</span>
-				<p>Add City Information</p>
-				<form id="new-acnt-form">
-                    <div class="row first-row-space">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>City</label>
-                                <input type="text" 
-                                       class="form-control" 
-                                       id="city"
-                                       placeholder="city">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>State</label>
-                                <input type="text" 
-                                       class="form-control"
-                                       id="state" 
-                                       placeholder="state">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row first-row-space">
-                        <div class="col-md-10"></div>
-                        <div class="col-md-2 text-right">
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-				
+				  <div class="modal-content">
+					<span class="closeAdd">&times;</span>
+					<p>Add City Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>City</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="city"
+										   placeholder="city">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>State</label>
+									<input type="text" 
+										   class="form-control"
+										   id="state" 
+										   placeholder="state">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+			</div>  
+			  <div id="editModal" class="modal">
+			  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeEdit">&times;</span>
+					<p>Edit City Information</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>City</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="city"
+										   placeholder="city">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>State</label>
+									<input type="text" 
+										   class="form-control"
+										   id="state" 
+										   placeholder="state">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
 			  </div>
+			  <div class="modal" id="deleteModal">
+				  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="closeDelete">&times;</span>
+					<p>Delete City</p>
+					<form id="new-acnt-form">
+						<div class="row first-row-space">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>City</label>
+									<input type="text" 
+										   class="form-control" 
+										   id="city"
+										   placeholder="city">
+								</div>
+							</div>
+						</div>
+						<div class="row first-row-space">
+							<div class="col-md-10"></div>
+							<div class="col-md-2 text-right">
+								<div class="form-group">
+									<input type="submit" class="btn btn-primary" value="Submit">
+								</div>
+							</div>
+						</div>
+					</form>
+					
+				  </div>
+				</div>
+		</div>
 
-			</div>
-
-
-
-
-			
-        </div>
-        
-
-
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/app.js"></script>
-        <script src="assets/js/create-profile.js"></script>
     </body>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" defer></script>
+        <script src="assets/js/app.js" defer></script>
+        <script src="assets/js/create-profile.js" defer></script>
 </html>
