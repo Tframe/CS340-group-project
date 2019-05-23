@@ -1,59 +1,36 @@
-/* CS 361
- * Group 15
- * Tool Software Suite
+/* CS 362
+ * Group 6
+ * travel site
  * Mock Server
  */
 
+var express = require('express');
+var mysql = require('./dbcon.js');
+var bodyParser = require('body-parser');
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const path = require('path');
+var app = express();
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
+app.engine('handlebars', handlebars.engine);
+app.use(bodyParser.urlencoded({extended:true}));
+app.use('/static', express.static('public'));
+app.set('view engine', 'handlebars');
+app.set('port', process.argv[2]);
+app.set('mysql', mysql);
+app.use('/city', require('./city.js'));
+app.use('/', express.static('public'));
 
-const app = express();
-const router = express.Router();
-
-
-// mount middleware
-app.use(bodyParser.json());
-
-
-// const htmlDir = path.join(__dirname + '/ToolLibrary');
-
-
-// routes
-// CITE: https://codeforgeek.com/2015/01/render-html-file-expressjs/
-// normal entry 
-router.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname+'/ToolLibrary/loginPage.html'));
-});
-// explicit pages
-// login 
-router.get('/login', function (req, res) {
-    res.sendFile(path.join(__dirname+'/ToolLibrary/loginPage.html'));
-});
-// view tools page
-router.get('/view-tools', function (req, res) {
-	res.sendFile(path.join(__dirname+'/ToolLibrary/view-tools-demo.html'));
-});
-// create accounts page
-router.get('/create-account', function (req, res) {
-    res.sendFile(path.join(__dirname+'/ToolLibrary/create-patron-demo.html'));
+app.use(function(req,res){
+ res.status(404);
+ res.render('404');
 });
 
+app.use(function(err, req, res, next){
+ console.error(err.stack);
+ res.status(500);
+ res.render('500');
+});
 
-// static files
-app.use(express.static(__dirname + '/ToolLibrary'));
-app.use(express.static(__dirname + '/ToolLibrary/assets'));
-
-
-// use router
-app.use('/', router);
-
-
-// set up port
-const port = process.env.PORT || 5002;
-// run server
-app.listen(port, () => {
-    console.log("Server listening on port " + port);
+app.listen(app.get('port'), function(){
+ console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
